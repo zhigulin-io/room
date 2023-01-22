@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>ROOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Добро пожаловать в ROOM</h2>
+        
+        <audio id="voices" src="" type="audio/webm;codecs=opus" autoplay></audio>
+        
+        <div id="room-login" hidden>
+            <input id="room-username" type="text" />
+            <input type="button" value="Войти" onclick="connectToRoom()" />
+        </div>
+        <div id="room-chat" hidden>
+            <table id="room-chat-log">
+                <caption>CHAT LOG</caption>
+                <tr>
+                    <th>MESSAGES</th>
+                </tr>
+            </table>
+            <textarea id="room-chat-message" rows="4" cols="20" minlength="1" maxlength="255" style="resize: none"></textarea><br/>
+            <input type="button" value="Отправить" onclick="sendMsg()" />
+        </div>
+        <script src="js/voice.js"></script>
+    </body>
+</html>
